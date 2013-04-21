@@ -1,30 +1,23 @@
 //########################################################################################################
 //## VALIDAR
 //########################################################################################################
-function validarForm (form){
-    if (form.checkValidity()) {
-        if(confirm("IMPORTANTE\n Por favor, verifique se nosso e-mail foi para o SPAM ou lixo eletrônico do seu e-mail e classifique-o como remetente confiável para receber mais informações em sua caixa de entrada.")==true)
-        { form.submit(); }
-    }
-};
 
-function aviso()
-{
-    var formTop = $('#formTop').get(0);
-    var formContato = $('#formContato').get(0);
+(function ($) {
 
-    if (formTop) {
-        validarForm(formTop);
-    }
+    $(function () {
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            var form = $(e.currentTarget).get(0);
 
-    if (formMid) {
-        validarForm(formMid);
-    }
+            if (form.checkValidity()) {
+                if(confirm("IMPORTANTE\n\nPor favor, verifique se nosso e-mail foi para o SPAM ou lixo eletrônico do seu e-mail e classifique-o como remetente confiável para receber mais informações em sua caixa de entrada.")==true)
+                { form.submit(); }
+            }
+        });
+    });  
 
-    if (formContato) {
-        validarForm(formContato);
-    }    
-};
+})(jQuery);
+
 //########################################################################################################
 
 //########################################################################################################
