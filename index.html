@@ -92,9 +92,10 @@
                             <li><a href="#negocio">Negócio</a></li>
                             <li><a href="#vantagens">Vantagens</a></li>
                             <li><a href="#depoimentos">Depoimentos</a></li>
-                            <li><a href="#conferencia">Conheça</a></li>
+                            <li><a href="#conferencia">Conferência</a></li>
                             <li><a href="#contato">Contato</a></li>
                             <li><a href="http://blog.minharendaextra.com" target="_blank">Blog</a></li>
+                            <li><a href="http://www.polishop.vc/danilojrr" target="_blank">Loja</a></li>
                         </ul>
                         <!-- End Menu-->
                         <!--
@@ -133,16 +134,16 @@
                             <!--<h2>Quer saber mais?</h2>-->
                             <p>Quer ver esta história de sucesso passar ou fazer parte dela? Seja pioneiro e venha conosco rumo a 2020 levar essa oportunidade do Brasil para o mundo! </p>
 
-                            <form action="http://www.sistemawinner.com.br/receptora/_apps/receptora/index.php" id="cadastrar" method="post" name="cadastrar">
+                            <form action="http://www.sistemawinner.com.br/receptora/_apps/receptora/index.php" method="post" id='formTop' name="cadastrar">
                                 <input name="cmd" type="hidden" value="relRobo" /> 
                                 <input name="usr_nickname" type="hidden" value="ZGFuaWxvanJy" /> 
                                 <input name="usr_origem" type="hidden" value="2" /> 
                                 <input name="url" type="hidden" value="<a href='http://www.sistemawinner.com.br/danilojrr'>http://www.sistemawinner.com.br/danilojrr</a>" />
 
-                                <input class="input" id="usr_nome" name="usr_nome" size="35" type="text" placeholder='Seu Nome' required />
-                                <input class="input" id="usr_email" name="usr_email" size="35" type="email" placeholder="Seu Email" required />
-                                <input class="input" id="usr_telefone" maxlength="11" name="usr_telefone" size="11" type="tel" placeholder="Seu Fone" />
-                                <input type="submit" name="submit" value="Quero Saber Agora!" class="button" onclick='aviso()' />
+                                <input type="text" class="input" name="usr_nome" size="35" placeholder='Nome' required />
+                                <input type="email" class="input" name="usr_email" size="35" placeholder="Email" required />
+                                <input type="tel" class="input" name="usr_telefone" size="11" maxlength="11" placeholder="Fone" required />
+                                <input type="submit" name="submit" value="Quero Saber Mais" class="button" onclick='aviso()' />
                             </form>
                         </div> <!-- End text -->
                     </div>
@@ -342,7 +343,7 @@
         </section>
         <!-- End section area-->
 
-        <!-- section area-->
+        <!-- section area->
         <section class="section_area">
             <div class="container">
                 <div class="row-fluid">
@@ -352,14 +353,14 @@
                     </h1> 
 
                     <div class="newsletter">
-                        <form class="row-fluid" action="http://www.sistemawinner.com.br/receptora/_apps/receptora/index.php" method="post" name="cadastrar">
+                        <form class="row-fluid" action="http://www.sistemawinner.com.br/receptora/_apps/receptora/index.php" method="post" id='formMid' name="cadastrar">
                             <div class="span5">
                                 <label>Nome</label>
-                                <input type="text" name="usr_nome" id="yname" placeholder="Seu Nome" required>
+                                <input type="text" name="usr_nome" placeholder="Nome" required>
                             </div>
                             <div class="span5">
                                 <label>Email</label>
-                                <input type="email" name="usr_email" id="email" placeholder="Seu Email" required>
+                                <input type="email" name="usr_email" placeholder="Email" required>
                             </div>
                             <div class="span2">
                                 <input type="submit" class="button" value="Saber Mais!" onclick='aviso()' />
@@ -597,10 +598,10 @@
                     <div class="span8">
                         <div class='contato'>
                             <form action="http://www.sistemawinner.com.br/receptora/_apps/maisinformacao/index.php" method="post" 
-                                name="cadastrar_contato" id="cadastrar_contato">
+                                name="cadastrar" id="formContato">
 
                                 <input name="cmd" type="hidden" value="cadastro" />
-                                <input name="url" type="hidden" value="http://www.sistemawinner.com.br/danilojrr/hotsite" />
+                                <input name="url" type="hidden" value="http://www.sistemawinner.com.br/danilojrr/suaescolha" />
                                 <input name="idUsuario" type="hidden" value="ZGFuaWxvanJy" />
 
                                 <div class="input_form">

@@ -1,15 +1,30 @@
 //########################################################################################################
 //## VALIDAR
 //########################################################################################################
+function validarForm (form){
+    if (form.checkValidity()) {
+        if(confirm("IMPORTANTE\n Por favor, verifique se nosso e-mail foi para o SPAM ou lixo eletrônico do seu e-mail e classifique-o como remetente confiável para receber mais informações em sua caixa de entrada.")==true)
+        { form.submit(); }
+    }
+};
+
 function aviso()
 {
-	form = document.cadastrar;
+    var formTop = $('#formTop').get(0);
+    var formContato = $('#formContato').get(0);
 
-	if (form.checkValidity()) {
-		if(confirm("IMPORTANTE:\n POR FAVOR, VERIFIQUE SE NOSSO E-MAIL FOI PARA SPAM OU NO LIXO ELETRÔNICO E CLASSIFIQUE-O COMO REMETENTE CONFIÁVEL PARA RECEBER MAIS INFORMAÇÕES EM SUA CAIXA DE ENTRADA")==true)
-		{ form.submit(); }
-	}
-}
+    if (formTop) {
+        validarForm(formTop);
+    }
+
+    if (formMid) {
+        validarForm(formMid);
+    }
+
+    if (formContato) {
+        validarForm(formContato);
+    }    
+};
 //########################################################################################################
 
 //########################################################################################################
@@ -17,7 +32,7 @@ function aviso()
 //########################################################################################################
 $(function()
 {
-    $("#usr_telefone, #usr_telefone_2, #c_telefone").focusout(function(){
+    $("input[type=tel]").focusout(function(){
         var phone, element;
         element = $(this);
         element.unmask();
