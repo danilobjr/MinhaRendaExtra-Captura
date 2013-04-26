@@ -6,12 +6,11 @@
 
     $(function () {
         $('form').on('submit', function (e) {
-            e.preventDefault();
             var form = $(e.currentTarget).get(0);
 
             if (form.checkValidity()) {
-                if(confirm("IMPORTANTE\n\nPor favor, verifique se nosso e-mail foi para o SPAM ou lixo eletrônico do seu e-mail e classifique-o como remetente confiável para receber mais informações em sua caixa de entrada.")==true)
-                { form.submit(); }
+                if(!confirm("IMPORTANTE\n\nPor favor, verifique se nosso e-mail foi para o SPAM ou lixo eletrônico do seu e-mail e classifique-o como remetente confiável para receber mais informações em sua caixa de entrada.")==true)
+                { return false; }
             }
         });
     });  
